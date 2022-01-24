@@ -11,6 +11,9 @@ km = keypad.KeyMatrix(
 while True:
     event = km.events.get()
     if event:
+        
+        if 'pressed>' in str(event):
         #print(event)
-        pressed = real_keys[int(str(event).replace('<Event: key_number', '').replace('pressed>','').replace('released>', ''))]
-        print(pressed)
+        
+            pressed = real_keys[int(str(event).replace('<Event: key_number', '').replace('pressed>',''))]
+            print(pressed)
