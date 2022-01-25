@@ -42,7 +42,7 @@ while True:# main loop that code runs in
         last = event
 	
         while 'released>' not in str(event):
-            time.sleep(.2)
+            
             event = km.events.get()
             led.value = True
             pressed = real_keys[int(str(last).replace('<Event: key_number', '').replace('pressed>',''))]#defines what key was pressec
