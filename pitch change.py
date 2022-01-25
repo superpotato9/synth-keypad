@@ -52,7 +52,8 @@ while True:# main loop that code runs in
                 x = x - 5
                 if x < -20:
                     x = -20
-                
+            if pressed == '0':
+                x = 1
             if pressed not in ['*', '#', '0']:# this block and on plays the notes 
                 f = TONE_FREQ[pressed]
                 piezo.frequency = f + x
